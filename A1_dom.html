@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My zoo</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+        h1{
+            color:rgb(134, 134, 196);
+        }
+        #zoo {
+            border: 2px solid rgb(174, 174, 207);
+            width: 300px;
+            margin: 16px auto;
+            padding: 12px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .zone {
+            margin: 6px 0;
+            padding: 8px 12px;
+            text-align: left;
+            border-radius: 6px;
+            border: 1px solid rgb(143, 160, 175);
+        }
+        button{
+        background-color: rgb(136, 144, 152);
+        color: white;
+        padding: 10px 24px;
+        border-radius: 20px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>My zoo</h1>
+    <p>Use javascript and the DOM to interact with the page!</p>
+    <div id="zoo">
+        <div class="zone">Zone 1: <span id="zone1"></span></div>
+        <div class="zone">Zone 2: <span id="zone2"></span></div>
+        <div class="zone">Zone 3: <span id="zone3"></span></div>
+    </div>
+    <br>
+    <button onclick="openzoo()">Open the Zoo!</button>
+    <p id="zoo-status"></p>
+    <script>
+        function openzoo(){
+        document.getElementById("zone1").innerHTML="Lion";
+        document.getElementById("zone2").innerHTML="Elephaant";
+        document.getElementById("zone3").innerHTML="penguin";
+
+/* Task 4: Show the total number of animals */
+
+document.getElementById("total").innerHTML = "3";
+
+/* Task 5: Change the zoo background colour */
+
+document.getElementById("zoo").style.backgroundColor = "lightgreen";
+
+/* Task 6: Use the document object to show the page title */
+
+document.getElementById("zoo-status").innerHTML = document.title + " is now open!";
+        }
+    </script>
+</body>
+</html>
